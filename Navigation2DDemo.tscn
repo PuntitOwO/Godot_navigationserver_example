@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://StaticNavigation.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://LayeredNavigation.gd" type="Script" id=3]
+[ext_resource path="res://MovingPolygonNavigation.gd" type="Script" id=4]
+[ext_resource path="res://ObstacleNavigation.gd" type="Script" id=5]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 128, 88, 128, 192, 64, 192, 64, 64, 192, 64, 224, 192, 224, 152, 320, 112, 320, 64, 416, 112, 448, 64, 448, 192, 320, 192, 384, 128, 320, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4 ), PoolIntArray( 5, 0, 4, 6 ), PoolIntArray( 7, 5, 6, 8 ), PoolIntArray( 9, 7, 8, 10 ), PoolIntArray( 9, 10, 11 ), PoolIntArray( 9, 11, 12, 13 ), PoolIntArray( 13, 12, 14 ) ]
+outlines = [ PoolVector2Array( 384, 128, 320, 128, 320, 192, 448, 192, 448, 64, 320, 64, 224, 152, 192, 64, 64, 64, 64, 192, 128, 192, 128, 88, 224, 192, 320, 112, 416, 112 ) ]
+
+[sub_resource type="Curve" id=10]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.5 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 128, 320, 128, 448, 64, 448, 64, 256, 88, 272, 256, 256, 232, 272, 256, 320, 232, 384, 272, 384, 448, 320, 448, 448, 384, 448, 384, 384, 304, 400, 320, 400, 320, 432, 256, 432, 256, 400, 272, 400, 304, 384 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 4, 3, 5, 6 ), PoolIntArray( 6, 5, 7, 8 ), PoolIntArray( 9, 8, 7, 10 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17 ), PoolIntArray( 17, 18, 19 ), PoolIntArray( 14, 17, 19, 20 ), PoolIntArray( 20, 19, 9 ), PoolIntArray( 20, 9, 10 ), PoolIntArray( 20, 10, 13 ) ]
+outlines = [ PoolVector2Array( 128, 320, 128, 448, 64, 448, 64, 256, 256, 256, 256, 320, 448, 320, 448, 448, 384, 448, 384, 384, 304, 384, 304, 400, 320, 400, 320, 432, 256, 432, 256, 400, 272, 400, 272, 384, 232, 384, 232, 272, 88, 272 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 208, 432, 192, 432, 192, 400, 256, 400, 256, 432, 240, 432, 208, 448, 240, 448, 280, 448, 280, 560, 256, 512, 384, 512, 384, 384, 448, 384, 448, 576, 424, 560, 256, 576, 64, 512, 128, 448, 64, 384, 128, 384 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 0, 3, 5, 6 ), PoolIntArray( 6, 5, 7 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14, 15 ), PoolIntArray( 15, 14, 16, 9 ), PoolIntArray( 9, 16, 10 ), PoolIntArray( 7, 10, 17, 6 ), PoolIntArray( 18, 6, 17 ), PoolIntArray( 18, 17, 19, 20 ) ]
+outlines = [ PoolVector2Array( 128, 448, 128, 384, 64, 384, 64, 512, 256, 512, 256, 576, 448, 576, 448, 384, 384, 384, 384, 512, 424, 560, 280, 560, 280, 448, 240, 448, 240, 432, 256, 432, 256, 400, 192, 400, 192, 432, 208, 432, 208, 448 ) ]
+
+[sub_resource type="NavigationPolygon" id=4]
+vertices = PoolVector2Array( 640, 192, 512, 192, 512, 128, 640, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 640, 128, 512, 128, 512, 192, 640, 192 ) ]
+
+[sub_resource type="NavigationPolygon" id=5]
+vertices = PoolVector2Array( 960, 128, 960, 192, 832, 192, 832, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 960, 128, 960, 192, 832, 192, 832, 128 ) ]
+
+[sub_resource type="NavigationPolygon" id=6]
+vertices = PoolVector2Array( 768, 88, 832, 88, 832, 104, 784, 104, 768, 152, 784, 216, 832, 216, 832, 232, 768, 232, 768, 168, 704, 152, 704, 168, 704, 232, 640, 232, 640, 216, 688, 216, 688, 104, 704, 88, 640, 88, 640, 104 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 5, 8, 9 ), PoolIntArray( 4, 5, 9 ), PoolIntArray( 10, 4, 9, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 11, 12, 15, 16 ), PoolIntArray( 10, 11, 16 ), PoolIntArray( 17, 10, 16 ), PoolIntArray( 18, 17, 16, 19 ) ]
+outlines = [ PoolVector2Array( 640, 88, 640, 104, 688, 104, 688, 216, 640, 216, 640, 232, 704, 232, 704, 168, 768, 168, 768, 232, 832, 232, 832, 216, 784, 216, 784, 104, 832, 104, 832, 88, 768, 88, 768, 152, 704, 152, 704, 88 ) ]
+
+[sub_resource type="NavigationPolygon" id=7]
+vertices = PoolVector2Array( 576, 384, 576, 320, 896, 320, 896, 384, 960, 384, 960, 448, 896, 448, 576, 448, 896, 512, 576, 512, 512, 384, 512, 448 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6 ), PoolIntArray( 0, 3, 6, 7 ), PoolIntArray( 6, 8, 9, 7 ), PoolIntArray( 10, 0, 7, 11 ) ]
+outlines = [ PoolVector2Array( 512, 384, 512, 448, 576, 448, 576, 512, 896, 512, 896, 448, 960, 448, 960, 384, 896, 384, 896, 320, 576, 320, 576, 384 ) ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 48, 48 )
+
+[node name="Navigation2DDemo" type="Node2D"]
+
+[node name="Static" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Static"]
+navpoly = SubResource( 1 )
+
+[node name="Start" type="Sprite" parent="Static"]
+position = Vector2( 96, 168 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="End" type="Sprite" parent="Static"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 352, 168 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="Static"]
+width_curve = SubResource( 10 )
+default_color = Color( 1, 0, 0, 1 )
+
+[node name="Layers" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Layer1" type="NavigationPolygonInstance" parent="Layers"]
+modulate = Color( 0, 0.0156863, 1, 1 )
+navpoly = SubResource( 2 )
+
+[node name="Layer2" type="NavigationPolygonInstance" parent="Layers"]
+modulate = Color( 0.803922, 1, 0, 1 )
+navpoly = SubResource( 3 )
+navigation_layers = 2
+
+[node name="Start" type="Sprite" parent="Layers"]
+position = Vector2( 96, 416 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="End" type="Sprite" parent="Layers"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 416, 416 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Layer1Line2D" type="Line2D" parent="Layers"]
+width_curve = SubResource( 10 )
+default_color = Color( 0, 0.109804, 1, 1 )
+
+[node name="Layer2Line2D" type="Line2D" parent="Layers"]
+width_curve = SubResource( 10 )
+default_color = Color( 0.101961, 1, 0, 1 )
+
+[node name="BothLayersLine2D" type="Line2D" parent="Layers"]
+width_curve = SubResource( 10 )
+default_color = Color( 1, 0, 0, 1 )
+
+[node name="MovingPolygon" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="StartingZone" type="NavigationPolygonInstance" parent="MovingPolygon"]
+navpoly = SubResource( 4 )
+navigation_layers = 4
+
+[node name="EndingZone" type="NavigationPolygonInstance" parent="MovingPolygon"]
+navpoly = SubResource( 5 )
+navigation_layers = 4
+
+[node name="MovingZone" type="NavigationPolygonInstance" parent="MovingPolygon"]
+position = Vector2( 0, -64 )
+navpoly = SubResource( 6 )
+navigation_layers = 4
+
+[node name="Start" type="Sprite" parent="MovingPolygon"]
+position = Vector2( 544, 160 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="End" type="Sprite" parent="MovingPolygon"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 928, 160 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="MovingPolygon"]
+width_curve = SubResource( 10 )
+
+[node name="Obstacle" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Obstacle"]
+navpoly = SubResource( 7 )
+navigation_layers = 8
+
+[node name="Start" type="Sprite" parent="Obstacle"]
+position = Vector2( 544, 416 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="End" type="Sprite" parent="Obstacle"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 928, 416 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="Obstacle"]
+width_curve = SubResource( 10 )
+
+[node name="Dummy" type="KinematicBody2D" parent="Obstacle"]
+position = Vector2( 544, 416 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Obstacle/Dummy"]
+navigation_layers = 8
+avoidance_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Dummy"]
+shape = SubResource( 8 )
+
+[node name="Icon" type="Sprite" parent="Obstacle/Dummy"]
+modulate = Color( 0.14902, 1, 0, 1 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Obstacle" type="KinematicBody2D" parent="Obstacle"]
+position = Vector2( 736, 336 )
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="Obstacle/Obstacle"]
+estimate_radius = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Obstacle"]
+shape = SubResource( 9 )
+
+[node name="Icon" type="Sprite" parent="Obstacle/Obstacle"]
+modulate = Color( 0.14902, 1, 0, 1 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
